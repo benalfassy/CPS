@@ -9,15 +9,15 @@
 <AnchorPane prefHeight="620.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cps.clients.controllers.employee.StatusReportController">
    <children>
       <TextField fx:id="directory" layoutX="165.0" layoutY="226.0" prefHeight="25.0" prefWidth="179.0" />
-      <Button layoutX="344.0" layoutY="226.0" mnemonicParsing="false" onAction="#OnBrowse" prefHeight="31.0" prefWidth="144.0" text="Browse" />
+      <Button layoutX="344.0" layoutY="226.0" mnemonicParsing="false" onAction="#OnBrowse" prefHeight="25.0" prefWidth="102.0" text="Browse" />
       <Button layoutX="23.0" layoutY="563.0" mnemonicParsing="false" onAction="#OnBack" prefHeight="33.0" prefWidth="130.0" text="Back" />
-      <Button layoutX="213.0" layoutY="308.0" mnemonicParsing="false" onAction="#OnSave" prefHeight="33.0" prefWidth="195.0" text="Save In Directory" />
-      <Label layoutX="165.0" layoutY="191.0" prefHeight="26.0" prefWidth="195.0" text="Please select a directory">
+      <Button layoutX="200.0" layoutY="277.0" mnemonicParsing="false" onAction="#OnSave" prefHeight="33.0" prefWidth="195.0" text="Save In Directory" />
+      <Label layoutX="165.0" layoutY="196.0" prefHeight="26.0" prefWidth="195.0" text="Please select a directory">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
       <Label fx:id="Headline" layoutX="165.0" layoutY="98.0" prefHeight="45.0" prefWidth="340.0" text="Status Report" />
-      <ProgressBar fx:id="prgBar" layoutX="252.0" layoutY="349.0" prefHeight="23.0" prefWidth="117.0" visible="false" />
+      <ProgressBar fx:id="prgBar" layoutX="200.0" layoutY="310.0" prefHeight="23.0" prefWidth="195.0" visible="false" />
    </children>
 </AnchorPane>

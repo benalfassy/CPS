@@ -126,6 +126,13 @@ public class OrderInAdvanceController extends BaseController
 		    return;
 		}
 		
+		if (OrderInAdvanceResponse.GetRequestResult().equals(RequestResult.ResourceNotAvaillable))
+		{
+		    DialogBuilder.AlertDialog(AlertType.ERROR, null, "We are sorry, the parking lot is full.", null, false);
+		    
+		    return;
+		}
+		
 		DialogBuilder.AlertDialog(AlertType.INFORMATION, Consts.Approved, Consts.ThankYouForOrderInAdvance
 			+ "\n Your order ID : " + OrderInAdvanceResponse.GetResponseObject().getOrderId(), null, false);
 		

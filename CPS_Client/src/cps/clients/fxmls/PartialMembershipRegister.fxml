@@ -23,9 +23,9 @@
       <MenuButton fx:id="parkingLot" layoutX="120.0" layoutY="259.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="174.0" text="Parking Lot" />
       <Label layoutX="12.0" layoutY="259.0" prefHeight="25.0" prefWidth="120.0" text="Parking Lot:" />
       <ListView fx:id="carListView" layoutX="421.0" layoutY="366.0" prefHeight="203.0" prefWidth="200.0" />
-      <Button layoutX="293.0" layoutY="365.0" mnemonicParsing="false" onAction="#OnAddCar" prefHeight="25.0" prefWidth="61.0" text="Add Car" />
+      <Button layoutX="293.0" layoutY="365.0" mnemonicParsing="false" onAction="#OnAddCar" prefHeight="25.0" prefWidth="80.0" text="Add Car" />
       <Label layoutX="421.0" layoutY="334.0" prefHeight="25.0" prefWidth="88.0" text="Car List:" />
       <Label fx:id="Headline" layoutX="4.0" layoutY="85.0" prefHeight="17.0" prefWidth="639.0" text="Partial Membership Register" />
-      <Button layoutX="307.0" layoutY="544.0" mnemonicParsing="false" onAction="#OnRemoveSelected" prefHeight="25.0" prefWidth="114.0" text="Remove Selected" />
+      <Button layoutX="287.0" layoutY="544.0" mnemonicParsing="false" onAction="#OnRemoveSelected" prefHeight="25.0" prefWidth="134.0" text="Remove Selected" />
    </children>
 </AnchorPane>
