@@ -18,6 +18,6 @@
          </font>
       </Label>
       <Label fx:id="Headline" layoutX="165.0" layoutY="98.0" prefHeight="45.0" prefWidth="340.0" text="Status Report" />
-      <ProgressBar fx:id="prgBar" layoutX="29.0" layoutY="301.0" prefHeight="18.0" prefWidth="106.0" visible="false" />
+      <ProgressBar fx:id="prgBar" layoutX="252.0" layoutY="349.0" prefHeight="23.0" prefWidth="117.0" visible="false" />
    </children>
 </AnchorPane>

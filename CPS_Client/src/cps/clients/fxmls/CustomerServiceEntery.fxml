@@ -7,10 +7,10 @@
 
 <AnchorPane prefHeight="620.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cps.clients.controllers.employee.CustomerServiceEnteryController">
    <children>
-      <Button layoutX="36.0" layoutY="549.0" mnemonicParsing="false" onAction="#OnBack" prefHeight="39.0" prefWidth="137.0" text="Log Out" />
-      <Button layoutX="179.0" layoutY="321.0" mnemonicParsing="false" onAction="#OnManageComplaints" prefHeight="80.0" prefWidth="263.0" text="Manage Complaints" />
-      <Button layoutX="179.0" layoutY="221.0" mnemonicParsing="false" onAction="#OnSaveParkingSpot" prefHeight="80.0" prefWidth="263.0" text="Save Parking Spot" />
-      <Label fx:id="Headline" layoutX="220.0" layoutY="100.0" text="Customer Service Menu" />
-      <Button layoutX="179.0" layoutY="421.0" mnemonicParsing="false" onAction="#OnManageCustomer" prefHeight="80.0" prefWidth="263.0" text="Manage Customer" />
+      <Button layoutX="48.0" layoutY="547.0" mnemonicParsing="false" onAction="#OnBack" prefHeight="39.0" prefWidth="137.0" text="Log Out" />
+      <Button layoutX="48.0" layoutY="318.0" mnemonicParsing="false" onAction="#OnManageComplaints" prefHeight="80.0" prefWidth="263.0" text="Manage Complaints" />
+      <Button layoutX="48.0" layoutY="218.0" mnemonicParsing="false" onAction="#OnSaveParkingSpot" prefHeight="80.0" prefWidth="263.0" text="Save Parking Spot" />
+      <Label fx:id="Headline" layoutX="76.0" layoutY="98.0" prefHeight="21.0" prefWidth="197.0" text="Customer Service Menu" />
+      <Button layoutX="48.0" layoutY="413.0" mnemonicParsing="false" onAction="#OnManageCustomer" prefHeight="80.0" prefWidth="263.0" text="Manage Customer" />
    </children>
 </AnchorPane>

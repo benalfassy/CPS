@@ -8,10 +8,10 @@
 <AnchorPane prefHeight="620.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cps.clients.controllers.employee.ManageComplaintsController">
    <children>
       <ListView fx:id="complaintsList" layoutX="159.0" layoutY="130.0" prefHeight="360.0" prefWidth="320.0" />
-      <Button layoutX="30.0" layoutY="559.0" mnemonicParsing="false" onAction="#OnBack" prefHeight="35.0" prefWidth="129.0" text="Back" />
+      <Button layoutX="24.0" layoutY="562.0" mnemonicParsing="false" onAction="#OnBack" prefHeight="35.0" prefWidth="129.0" text="Back" />
       <Button layoutX="159.0" layoutY="504.0" mnemonicParsing="false" onAction="#OnLoad" prefHeight="35.0" prefWidth="158.0" text="Load Complaints" />
       <Button layoutX="319.0" layoutY="504.0" mnemonicParsing="false" onAction="#OnHandleComplaint" prefHeight="35.0" prefWidth="158.0" text="Handle Complaint" />
       <Label fx:id="Headline" layoutX="142.0" layoutY="39.0" prefHeight="58.0" prefWidth="458.0" text="Mange Complaints" />
-      <ProgressBar fx:id="prgBar" layoutX="252.0" layoutY="565.0" prefHeight="18.0" prefWidth="129.0" visible="false" />
+      <ProgressBar fx:id="prgBar" layoutX="159.0" layoutY="539.0" prefHeight="23.0" prefWidth="158.0" visible="false" />
    </children>
 </AnchorPane>
