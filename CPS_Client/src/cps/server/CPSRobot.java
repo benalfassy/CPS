@@ -16,7 +16,7 @@ import cps.utilities.CPS_Tracer;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class CPSRobot. Responsible on the parking spots
+ * The Class CPSRobot. Responsible of the parking spots.
  */
 public class CPSRobot
 {
@@ -65,7 +65,7 @@ public class CPSRobot
     }
     
     /**
-     * Orginize parking spots after add car.
+     * Organize parking spots after add car.
      *
      * @param request
      *            the request

@@ -30,6 +30,7 @@ import javafx.scene.control.TextField;
 // TODO: Auto-generated Javadoc 
 /**
  * The Class PartialMembershipRegisterController.
+ * Used for registering for a partial membership.
  */
 public class PartialMembershipRegisterController extends BaseController
 {
@@ -102,7 +103,7 @@ public class PartialMembershipRegisterController extends BaseController
     }
     
     /**
-     * Client clicks on back button.
+     * Sets the previous scene.
      *
      * @param event
      *            the event
@@ -118,7 +119,8 @@ public class PartialMembershipRegisterController extends BaseController
     }
     
     /**
-     * Client clicks on submit and pay button.
+     * Calculates the price of the membership and sets the payment controller.
+     * After approving the payment, creates the new partial membership.
      *
      * @param event
      *            the event
@@ -175,7 +177,7 @@ public class PartialMembershipRegisterController extends BaseController
     }
     
     /**
-     * Try construct partial membership.
+     * Creates the membership according to the details filled by the customer.
      *
      * @return true, if successful
      */
@@ -202,7 +204,7 @@ public class PartialMembershipRegisterController extends BaseController
     }
     
     /**
-     * Client clicks on add car button.
+     * Adds a car to the membership.
      *
      * @param event
      *            the event
@@ -220,7 +222,7 @@ public class PartialMembershipRegisterController extends BaseController
     }
     
     /**
-     * Client clicks on remove selected button.
+     * Removes the selected car from the membership.
      *
      * @param event
      *            the event
@@ -248,7 +250,7 @@ public class PartialMembershipRegisterController extends BaseController
     }
     
     /**
-     * Sets the payment amount.
+     * Calculates the membership's price.
      *
      * @return the float
      */
@@ -269,7 +271,7 @@ public class PartialMembershipRegisterController extends BaseController
     }
     
     /**
-     * Checks if is input legal.
+     * Checks if the input is legal.
      *
      * @return true, if successful
      */

@@ -26,6 +26,7 @@ import javafx.scene.control.Alert.AlertType;
 // TODO: Auto-generated Javadoc
 /**
  * The Class CeoLoginController.
+ * Used as the CEO's main page.
  */
 public class CeoLoginController extends EmployeeBaseController {
 
@@ -36,7 +37,7 @@ public class CeoLoginController extends EmployeeBaseController {
 	private ArrayList<String> DisableParkingLotInputs = new ArrayList<>();
 
 	/**
-	 * Instantiates a new ceo login controller.
+	 * Instantiates a new CEO login controller.
 	 */
 	public CeoLoginController() {
 		super();
@@ -55,8 +56,8 @@ public class CeoLoginController extends EmployeeBaseController {
 	private Label Headline;
 
 	/**
-	 * On initialize parking lot. Adds new parking lot to the DB and sets its sizes
-	 * by the given inputs.
+	 * Creates a new parking lot and sets its sizes
+	 * according to the given inputs.
 	 * 
 	 * @param event
 	 *            the event
@@ -89,8 +90,7 @@ public class CeoLoginController extends EmployeeBaseController {
 	}
 
 	/**
-	 * On register disabled parking lot. Registers disabled parking lot in to the DB
-	 * by the given parking lot name.
+	 * Disables a selected parking lot.
 	 * 
 	 * @param event
 	 *            the event
@@ -130,8 +130,7 @@ public class CeoLoginController extends EmployeeBaseController {
 	}
 
 	/**
-	 * On reserve parking spot. Reserves parking spot in the DB by the given inputs
-	 * in the given parking lot name .
+	 * Sets the reserve parking spot scene.
 	 * 
 	 * @param event
 	 *            the event
@@ -142,8 +141,7 @@ public class CeoLoginController extends EmployeeBaseController {
 	}
 
 	/**
-	 * On register disabled parking spot. Disable parking spot in the DB by the
-	 * given inputs in the given parking lot name .
+	 * Disables a selected parking spot.
 	 * 
 	 * @param event
 	 *            the event
@@ -198,8 +196,7 @@ public class CeoLoginController extends EmployeeBaseController {
 	}
 
 	/**
-	 * On update prices. Calls the scene where all update prices request are getting
-	 * managed .
+	 * Sets the manage request rate change scene.
 	 * 
 	 * @param event
 	 *            the event
@@ -210,7 +207,7 @@ public class CeoLoginController extends EmployeeBaseController {
 	}
 
 	/**
-	 * On produce report. Calls the scene where reports are produced
+	 * Sets the produce report scene.
 	 * 
 	 * @param event
 	 *            the event
@@ -221,8 +218,7 @@ public class CeoLoginController extends EmployeeBaseController {
 	}
 
 	/**
-	 * On enable parking lot. Registers enabled parking lot in to the DB by the
-	 * given parking lot name.
+	 * Enables a selected parking lot.
 	 * 
 	 * @param event
 	 *            the event
@@ -261,8 +257,7 @@ public class CeoLoginController extends EmployeeBaseController {
 	}
 
 	/**
-	 * On enable parking spot. Enable parking spot in the DB by the given inputs in
-	 * the given parking lot name .
+	 * Enables a selected parking spot.
 	 * 
 	 * @param event
 	 *            the event
@@ -317,7 +312,7 @@ public class CeoLoginController extends EmployeeBaseController {
 	}
 
 	/**
-	 * On back. Sets the Previews scene
+	 * Sets the previous scene.
 	 * 
 	 * @param event
 	 *            the event

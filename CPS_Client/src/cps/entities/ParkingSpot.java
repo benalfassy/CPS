@@ -62,7 +62,7 @@ public class ParkingSpot implements Serializable
     }
     
     /**
-     * Parses the.
+     * Parses the parking spot object to a string.
      *
      * @param str
      *            the str

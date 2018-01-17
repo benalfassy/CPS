@@ -12,7 +12,7 @@ import javafx.scene.control.Alert.AlertType;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class EmployeeBaseController.
+ * The Class EmployeeBaseController. The base of all employee controllers.
  */
 public class EmployeeBaseController extends BaseController
 {

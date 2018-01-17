@@ -52,7 +52,7 @@ public class InputValidator
     }
     
     /**
-     * Validate Ccv.
+     * Validate ccv.
      *
      * @param ccv the ccv
      * @return true, if successful

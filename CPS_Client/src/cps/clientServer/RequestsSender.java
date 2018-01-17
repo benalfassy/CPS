@@ -186,7 +186,7 @@ public class RequestsSender
     }
     
     /**
-     * Puts Reservation.
+     * Adds Reservation.
      *
      * @param reservation
      *            the reservation
@@ -222,10 +222,10 @@ public class RequestsSender
     }
     
     /**
-     * Adds the parkinglot.
+     * Adds the parking lot.
      *
      * @param parkinglot
-     *            the parkinglot
+     *            the parking lot
      * @return the server response
      */
     public static ServerResponse<Parkinglot> AddParkinglot(Parkinglot parkinglot)
@@ -234,7 +234,7 @@ public class RequestsSender
     }
     
     /**
-     * Gets the all parkinglots.
+     * Gets all the parking lots.
      *
      * @return the server response
      */
@@ -244,10 +244,10 @@ public class RequestsSender
     }
     
     /**
-     * Gets the parkinglot.
+     * Gets the parking lot.
      *
      * @param parkinglotName
-     *            the parkinglot name
+     *            the parking lot name
      * @return the server response
      */
     public static ServerResponse<Parkinglot> GetParkinglot(String parkinglotName)
@@ -256,10 +256,10 @@ public class RequestsSender
     }
     
     /**
-     * Change parkinglot status.
+     * Change parking lot status.
      *
      * @param changeParkinglotStatusRequest
-     *            the change parkinglot status request
+     *            the change parking lot status request
      * @return the server response
      */
     public static ServerResponse<ChangeParkinglotStatusRequest> ChangeParkinglotStatus(
@@ -303,10 +303,10 @@ public class RequestsSender
     }
     
     /**
-     * Adds the change rates request.
+     * Adds the rate change request.
      *
      * @param changeRatesRequest
-     *            the change rates request
+     *            the rate change request
      * @return the server response
      */
     public static ServerResponse<ChangeRatesRequest> AddChangeRatesRequest(ChangeRatesRequest changeRatesRequest)
@@ -315,10 +315,10 @@ public class RequestsSender
     }
     
     /**
-     * Close change rates request.
+     * Close rate change request.
      *
      * @param changeRatesResponse
-     *            the change rates response
+     *            the rate change response
      * @return the server response
      */
     public static ServerResponse<ChangeRatesResponse> CloseChangeRatesRequest(ChangeRatesResponse changeRatesResponse)
@@ -327,7 +327,7 @@ public class RequestsSender
     }
     
     /**
-     * Gets the all change rates requests.
+     * Gets the all rate change requests.
      *
      * @return the server response
      */
@@ -350,7 +350,7 @@ public class RequestsSender
     }
     
     /**
-     * Gets the all disabled parking spots.
+     * Gets all the disabled parking spots.
      *
      * @return the server response
      */
@@ -360,7 +360,7 @@ public class RequestsSender
     }
     
     /**
-     * Change expiration of  full membership.
+     * Change expiration date of full membership.
      *
      * @param fullMembership
      *            the full membership
@@ -372,7 +372,7 @@ public class RequestsSender
     }
     
     /**
-     * Change expiration of partial membership.
+     * Change expiration date of partial membership.
      *
      * @param partialMembership
      *            the partial membership
@@ -384,7 +384,7 @@ public class RequestsSender
     }
     
     /**
-     * Try insert car.
+     * Try to insert a car.
      *
      * @param addRealTimeParkingRequest
      *            the add real time parking request

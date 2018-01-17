@@ -44,7 +44,7 @@ public class CPS_Tracer
     }
     
     /**
-     * Trace error.
+     * Trace error with exception.
      *
      * @param message the message
      * @param e the e

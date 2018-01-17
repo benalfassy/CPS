@@ -31,7 +31,7 @@ public class KioskController extends BaseController
     private Label Headline;
     
     /**
-     * Client clicks on enter button.
+     * Sets the kiosk entry scene.
      *
      * @param event
      *            the event
@@ -43,7 +43,7 @@ public class KioskController extends BaseController
     }
     
     /**
-     * Client clicks on exit button.
+     * Sets the kiosk exit scene.
      *
      * @param event
      *            the event
@@ -55,7 +55,7 @@ public class KioskController extends BaseController
     }
     
     /**
-     * Client clicks on register button .
+     * Sets a dialog window with the options to register a full or a partial membership.
      *
      * @param event
      *            the event
@@ -82,7 +82,7 @@ public class KioskController extends BaseController
     }
     
     /**
-     * Client clicks on monitor and control button.
+     * Sets the monitor and control scene.
      *
      * @param event
      *            the event

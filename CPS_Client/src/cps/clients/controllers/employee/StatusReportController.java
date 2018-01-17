@@ -22,6 +22,7 @@ import javafx.stage.DirectoryChooser;
 // TODO: Auto-generated Javadoc
 /**
  * The Class StatusReportController.
+ * Used for displaying a reservation report.
  */
 public class StatusReportController extends EmployeeBaseController
 {
@@ -32,8 +33,7 @@ public class StatusReportController extends EmployeeBaseController
     private ProgressBar prgBar;
     
     /**
-     * On browse.
-     *Opens directory chooser 
+     * Opens directory chooser 
      * @param event the event
      */
     @FXML
@@ -49,8 +49,7 @@ public class StatusReportController extends EmployeeBaseController
     }
     
     /**
-     * On back.
-     *Sets the Previews scene
+     * Sets the Previous scene.
      * @param event the event
      */
     @FXML
@@ -60,8 +59,7 @@ public class StatusReportController extends EmployeeBaseController
     }
     
     /**
-     * On save.
-     *Sends request to build a PDF with the status report and save it to chosen directory
+     * Sends request to build a PDF with the status report and save it in the chosen directory.
      * @param event the event
      */
     @FXML

@@ -14,13 +14,13 @@ import javafx.scene.control.Alert.AlertType;
 // TODO: Auto-generated Javadoc
 /**
  * The Class ProduceReportController.
+ * Used for producing company lot reports.
  */
 public class ProduceReportController extends EmployeeBaseController 
 {
 
     /**
-     * On reservation report.
-     *Sets the scene which provides the reservation report.
+     * Sets the reservation report scene.
      * @param event the event
      */
     @FXML
@@ -31,8 +31,7 @@ public class ProduceReportController extends EmployeeBaseController
     }
 
     /**
-     * On complaints report.
-     *Gets the information from the DB that relevant to the Complaints report and displays it.
+     * Displays a complaints report in a dialog window.
      * @param event the event
      */
     @FXML
@@ -46,8 +45,7 @@ public class ProduceReportController extends EmployeeBaseController
     }
 
     /**
-     * On disabled parking spot report.
-     *Gets the information from the DB that relevant to the disabled parking spot report and displays it.
+     * Displays a disabled parking spots report in a dialog window.
      * @param event the event
      */
     @FXML
@@ -61,8 +59,7 @@ public class ProduceReportController extends EmployeeBaseController
     }
 
     /**
-     * On performance report.
-     *Gets the information from the DB that relevant to the performance report and displays it.
+     * Displays a performance report in a dialog window.
      * @param event the event
      */
     @FXML
@@ -75,8 +72,7 @@ public class ProduceReportController extends EmployeeBaseController
     }
 
     /**
-     * On activity report.
-     *Sets the scene which provides the activity report.
+     * Sets the activity report scene.
      * @param event the event
      */
     @FXML
@@ -87,8 +83,7 @@ public class ProduceReportController extends EmployeeBaseController
     }
 
     /**
-     * On back.
-     *Sets the Previews scene
+     * Sets the Previous scene.
      * @param event the event
      */
     @FXML
@@ -100,8 +95,7 @@ public class ProduceReportController extends EmployeeBaseController
     }
 
     /**
-     * On status report.
-     *Sets the scene which provides the status report.
+     * Sets the status report scene.
      * @param event the event
      */
     @FXML

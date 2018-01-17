@@ -34,6 +34,7 @@ import javafx.scene.control.TextField;
 // TODO: Auto-generated Javadoc
 /**
  * The Class GuestEntryController.
+ * Used for entering a parking lot as a guest.
  */
 public class GuestEntryController extends BaseController
 {
@@ -83,7 +84,7 @@ public class GuestEntryController extends BaseController
     }
     
     /**
-     * Client clicks on back button.
+     * Sets the previous scene.
      *
      * @param event
      *            the event
@@ -95,7 +96,8 @@ public class GuestEntryController extends BaseController
     }
     
     /**
-     * Client clicks on submit button.
+     * Calculates the estimated price of the reservation and creates the guest reservation with the details filled by the client.
+     * Tells the robot to park the client's car.
      *
      * @param event
      *            the event

@@ -28,6 +28,7 @@ import javafx.scene.control.ProgressBar;
 // TODO: Auto-generated Javadoc
 /**
  * The Class ManageComplaintsController.
+ * Used for viewing complaints and compensating customers.
  */
 public class ManageComplaintsController extends EmployeeBaseController
 {
@@ -47,7 +48,7 @@ public class ManageComplaintsController extends EmployeeBaseController
     private ProgressBar prgBar;
     
     /**
-     * Sets the Previews scene
+     * Sets the Previous scene.
      * @param event the event
      */
     @FXML
@@ -63,8 +64,7 @@ public class ManageComplaintsController extends EmployeeBaseController
     }
     
     /**
-     * This function helps the customer service employee handle complaints.  
-     * The employee selects a complaint by complaint id and decides whether to compensate the customer or not.
+     * Marks the complaint as handled and compensates the customer, if needed.
      * @param event the event
      */
     @FXML
@@ -135,8 +135,7 @@ public class ManageComplaintsController extends EmployeeBaseController
     }
     
     /**
-     * This function loads unhandled complaints from the Data Base into a list.
-     * The complaints are displayed by their complaint-id.
+     * Prints all unhandled complaints.
      * @param event the event
      */
     @FXML

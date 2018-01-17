@@ -23,6 +23,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 // TODO: Auto-generated Javadoc
 /**
  * The Class ActivityReportController.
+ * Used for displaying an activity report.
  */
 public class ActivityReportController extends EmployeeBaseController {
 
@@ -37,7 +38,7 @@ public class ActivityReportController extends EmployeeBaseController {
 		String numofdis;
 
 		/**
-		 * Instantiates a new my row.
+		 * Instantiates a new row.
 		 *
 		 * @param a
 		 *            the day of the month.
@@ -65,7 +66,7 @@ public class ActivityReportController extends EmployeeBaseController {
 		}
 
 		/**
-		 * Gets the number of canceled orders.
+		 * Gets the number of cancelled orders.
 		 *
 		 * @return the number of canceled orders.
 		 */
@@ -247,7 +248,7 @@ public class ActivityReportController extends EmployeeBaseController {
 	}
 
 	/**
-	 * On back. Sets the Previews scene
+	 * Sets the Previous scene.
 	 * 
 	 * @param event
 	 *            the event
@@ -259,7 +260,7 @@ public class ActivityReportController extends EmployeeBaseController {
 	}
 
 	/**
-	 * On show. Displays the report by the selected month and year
+	 * Displays the report according to the selected month and year.
 	 * 
 	 * @param event
 	 *            the event

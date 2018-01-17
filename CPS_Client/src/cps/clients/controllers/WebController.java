@@ -42,7 +42,7 @@ public class WebController extends BaseController
     private Label Headline;
     
     /**
-     * Client clicks on complaints button.
+     * Sets the complaints scene.
      *
      * @param event
      *            the event
@@ -54,7 +54,7 @@ public class WebController extends BaseController
     }
     
     /**
-     * Client clicks on register button.
+     * Opens a dialog window with the option to choose a full or partial membership.
      *
      * @param event
      *            the event
@@ -82,7 +82,7 @@ public class WebController extends BaseController
     }
     
     /**
-     * Client clicks on monitor and control button.
+     * Sets the monitor and control scene.
      *
      * @param event
      *            the event
@@ -94,7 +94,7 @@ public class WebController extends BaseController
     }
     
     /**
-     * Client clicks on order in advance button.
+     * Sets the order in advance scene.
      *
      * @param event
      *            the event
@@ -107,7 +107,7 @@ public class WebController extends BaseController
     }
     
     /**
-     * Client clicks on cancel order button.
+     * Opens a dialog window used to fill the reservation id and cancels the reservation.
      *
      * @param event
      *            the event

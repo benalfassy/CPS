@@ -88,7 +88,7 @@ public class PartialMembership extends MembershipBase
     }
     
     /**
-     * Car list string.
+     * Turns the car list to a string.
      *
      * @return the string
      */

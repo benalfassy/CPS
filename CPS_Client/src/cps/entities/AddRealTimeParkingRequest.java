@@ -69,7 +69,7 @@ public class AddRealTimeParkingRequest implements Serializable
     }
     
     /**
-     * Gets the checks if is guest request.
+     * Gets if is guest request.
      *
      * @return the checks if is guest request
      */

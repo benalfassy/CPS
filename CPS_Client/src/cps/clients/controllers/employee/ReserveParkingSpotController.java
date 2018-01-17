@@ -25,6 +25,7 @@ import javafx.scene.control.TextField;
 // TODO: Auto-generated Javadoc
 /**
  * The Class ReserveParkingSpotController.
+ * Used for reserving a parking spot.
  */
 public class ReserveParkingSpotController extends EmployeeBaseController
 {
@@ -73,8 +74,7 @@ public class ReserveParkingSpotController extends EmployeeBaseController
     }
     
     /**
-     * On submit.
-     *Sends the reservation to the DB
+     * Submits the new reservation.
      * @param event the event
      */
     @FXML
@@ -105,8 +105,7 @@ public class ReserveParkingSpotController extends EmployeeBaseController
     }
     
     /**
-     * On back.
-     *Sets the Previews scene
+     * Sets the Previous scene.
      * @param event the event
      */
     @FXML
@@ -116,7 +115,7 @@ public class ReserveParkingSpotController extends EmployeeBaseController
     }
     
     /**
-     * Try construct order in advance.
+     * Creates the reservation according to the details filled by the employee.
      *
      * @return true, if successful
      */
@@ -140,7 +139,7 @@ public class ReserveParkingSpotController extends EmployeeBaseController
     }
     
     /**
-     * Checks if is input legal.
+     * Checks if the input is legal.
      *
      * @return true, if successful
      */

@@ -21,6 +21,7 @@ import javafx.scene.control.ListView;
 // TODO: Auto-generated Javadoc
 /**
  * The Class ManageRequestRateChangeController.
+ * Used for viewing and approving rate change requests.
  */
 public class ManageRequestRateChangeController extends EmployeeBaseController
 {
@@ -35,8 +36,7 @@ public class ManageRequestRateChangeController extends EmployeeBaseController
     private String currentRequestId = null;
     
     /**
-     * This function loads parking-lot managers' requests from the Data Base into a list.
-     * So that the CEO could watch them.
+     * Prints all rate change requests.
      * @param event the event
 
      */
@@ -71,8 +71,7 @@ public class ManageRequestRateChangeController extends EmployeeBaseController
     }
     
     /**
-     * This function helps the CEO handle the requests of the parking-lot managers about changing parking lot rates.
-     * The CEO selects a request by request id and decides whether to approve it or not.
+     * Changes the rates of a certain parking lot, according to the selected rate change request.
      * @param event the event
      */
     @FXML
@@ -124,7 +123,7 @@ public class ManageRequestRateChangeController extends EmployeeBaseController
     }
     
     /**
-	 *Sets the Previews scene
+	 *Sets the Previous scene.
      * @param event the event
      */
     @FXML
