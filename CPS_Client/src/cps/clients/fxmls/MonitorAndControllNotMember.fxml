@@ -11,18 +11,15 @@
    <children>
       <AnchorPane layoutX="-6.0" prefHeight="620.0" prefWidth="620.0">
          <children>
-            <Label layoutX="21.0" layoutY="194.0" text="Order ID:" />
-            <TextField fx:id="Order_ID" layoutX="154.0" layoutY="190.0" prefHeight="25.0" prefWidth="219.0" />
-            <Button layoutX="405.0" layoutY="190.0" mnemonicParsing="false" onAction="#OnSubmit" prefHeight="25.0" prefWidth="123.0" text="Submit" />
-            <Label layoutX="19.0" layoutY="228.0" prefHeight="40.0" prefWidth="123.0" text="Order's Detailes:" />
-            <TextArea fx:id="TextOrderDeatiles" editable="false" layoutX="154.0" layoutY="239.0" prefHeight="347.0" prefWidth="386.0" />
-            <Button layoutX="23.0" layoutY="573.0" mnemonicParsing="false" onAction="#OnBack" text="Back" />
-            <Label fx:id="Headline" layoutX="14.0" layoutY="74.0" prefHeight="81.0" prefWidth="606.0" text="Monitor and Control - Oreders">
-               <font>
-                  <Font name="AR CENA" size="55.0" />
-               </font>
+            <Label layoutX="23.0" layoutY="176.0" text="Order ID:" />
+            <TextField fx:id="Order_ID" layoutX="154.0" layoutY="172.0" prefHeight="25.0" prefWidth="199.0" />
+            <Button layoutX="405.0" layoutY="172.0" mnemonicParsing="false" onAction="#OnSubmit" prefHeight="25.0" prefWidth="114.0" text="Submit" />
+            <Label layoutX="21.0" layoutY="223.0" prefHeight="40.0" prefWidth="123.0" text="Order's Detailes:" />
+            <TextArea fx:id="TextOrderDeatiles" editable="false" layoutX="154.0" layoutY="208.0" prefHeight="321.0" prefWidth="365.0" />
+            <Button layoutX="23.0" layoutY="569.0" mnemonicParsing="false" onAction="#OnBack" prefHeight="35.0" prefWidth="95.0" text="Back" />
+            <Label fx:id="Headline" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="68.0" prefHeight="35.0" prefWidth="607.0" text="Oreders">
             </Label>
-            <ProgressBar fx:id="prgBar" layoutX="405.0" layoutY="172.0" prefHeight="18.0" prefWidth="123.0" visible="false" />
+            <ProgressBar fx:id="prgBar" layoutX="405.0" layoutY="154.0" prefHeight="18.0" prefWidth="114.0" visible="false" />
          </children>
       </AnchorPane>
    </children>

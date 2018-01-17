@@ -8,18 +8,15 @@
 
 <AnchorPane prefHeight="620.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cps.clients.controllers.MonitorAndControllMemberController">
    <children>
-      <Label fx:id="Headline" layoutX="3.0" layoutY="69.0" prefHeight="58.0" prefWidth="620.0" text="Monitor and Control - Member">
-         <font>
-            <Font name="AR DELANEY" size="24.0" />
-         </font>
+      <Label fx:id="Headline" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="68.0" prefHeight="35.0" prefWidth="607.0" text="Members">
       </Label>
-      <Label layoutX="25.0" layoutY="175.0" text="Subscription ID :" />
-      <TextField fx:id="Subscription_ID" layoutX="172.0" layoutY="173.0" prefHeight="25.0" prefWidth="200.0" />
-      <Button layoutX="390.0" layoutY="173.0" mnemonicParsing="false" onAction="#OnSubmit" prefHeight="25.0" prefWidth="115.0" text="Submit" />
+      <Label layoutX="25.0" layoutY="177.0" text="Subscription ID :" />
+      <TextField fx:id="Subscription_ID" layoutX="169.0" layoutY="173.0" prefHeight="25.0" prefWidth="203.0" />
+      <Button layoutX="391.0" layoutY="173.0" mnemonicParsing="false" onAction="#OnSubmit" prefHeight="25.0" prefWidth="122.0" text="Submit" />
       <TextArea fx:id="TextMemberDeatil" editable="false" layoutX="170.0" layoutY="211.0" prefHeight="325.0" prefWidth="343.0" />
       <Label layoutX="19.0" layoutY="211.0" prefHeight="58.0" prefWidth="152.0" text="Member's Details:" />
       <Button fx:id="SubscriptionRenewal" disable="true" layoutX="444.0" layoutY="562.0" mnemonicParsing="false" onAction="#OnSubscriptionRenewal" prefHeight="45.0" prefWidth="165.0" text="Subscription Renewal" />
-      <Button layoutX="19.0" layoutY="573.0" mnemonicParsing="false" onAction="#OnBack" text="Back" />
-      <ProgressBar fx:id="prgBar" layoutX="390.0" layoutY="155.0" prefHeight="11.0" prefWidth="115.0" visible="false" />
+      <Button layoutX="18.0" layoutY="567.0" mnemonicParsing="false" onAction="#OnBack" prefHeight="35.0" prefWidth="102.0" text="Back" />
+      <ProgressBar fx:id="prgBar" layoutX="391.0" layoutY="155.0" prefHeight="18.0" prefWidth="122.0" visible="false" />
    </children>
 </AnchorPane>

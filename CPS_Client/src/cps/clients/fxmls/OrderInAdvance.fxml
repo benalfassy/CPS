@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.web.*?>
@@ -11,10 +12,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cps.clients.controllers.OrderInAdvanceController">
    <children>
-      <Label fx:id="Headline" layoutX="76.0" layoutY="58.0" text="order in advance">
-         <font>
-            <Font name="AR DELANEY" size="62.0" />
-         </font>
+      <Label fx:id="Headline" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="68.0" prefHeight="35.0" prefWidth="607.0" text="order in advance">
       </Label>
       <Label layoutX="85.0" layoutY="330.0" text="Arrival Hour" />
       <Label layoutX="85.0" layoutY="290.0" text="Arrival Date" />
@@ -31,8 +29,14 @@
       <TextField fx:id="email" layoutX="185.0" layoutY="450.0" prefHeight="25.0" prefWidth="200.0" promptText="example@ben.com" />
       <TextField fx:id="customerId" layoutX="185.0" layoutY="170.0" prefHeight="25.0" prefWidth="200.0" promptText="9 Digits" />
       <Button layoutX="25.0" layoutY="573.0" mnemonicParsing="false" onAction="#OnBack" text="Back" />
-      <DatePicker fx:id="arrivalDate" layoutX="185.0" layoutY="290.0" prefHeight="25.0" prefWidth="200.0" />
-      <DatePicker fx:id="leavingDate" layoutX="185.0" layoutY="370.0" prefHeight="25.0" prefWidth="200.0" />
+      <DatePicker fx:id="arrivalDate" layoutX="185.0" layoutY="290.0" prefHeight="25.0" prefWidth="200.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></DatePicker>
+      <DatePicker fx:id="leavingDate" layoutX="185.0" layoutY="370.0" prefHeight="25.0" prefWidth="200.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></DatePicker>
       <MenuButton fx:id="parkingLot" layoutX="185.0" layoutY="250.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" text="ParkingLot" />
    </children>
 </AnchorPane>

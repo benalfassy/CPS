@@ -17,10 +17,7 @@
       <Button layoutX="14.0" layoutY="554.0" mnemonicParsing="false" onAction="#OnBack" prefHeight="39.0" prefWidth="115.0" text="Log Out" />
       <Button layoutX="324.0" layoutY="465.0" mnemonicParsing="false" onAction="#OnRegisterDisabeledParkingSpot" prefHeight="80.0" prefWidth="263.0" text="Disable Parking Spot" />
       <Button layoutX="324.0" layoutY="362.0" mnemonicParsing="false" onAction="#OnRigisterDisabledParkingLot" prefHeight="80.0" prefWidth="263.0" text="Disable Parking Lot" />
-      <Label fx:id="Headline" layoutX="228.0" layoutY="56.0" prefHeight="51.0" prefWidth="248.0" text="CEO Menu">
-         <font>
-            <Font size="24.0" />
-         </font>
+      <Label fx:id="Headline" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="68.0" prefHeight="35.0" prefWidth="607.0" text="CEO Menu">
       </Label>
    </children>
 </AnchorPane>

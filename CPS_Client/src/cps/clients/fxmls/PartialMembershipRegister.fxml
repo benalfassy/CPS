@@ -25,7 +25,7 @@
       <ListView fx:id="carListView" layoutX="421.0" layoutY="366.0" prefHeight="203.0" prefWidth="200.0" />
       <Button layoutX="293.0" layoutY="365.0" mnemonicParsing="false" onAction="#OnAddCar" prefHeight="25.0" prefWidth="80.0" text="Add Car" />
       <Label layoutX="421.0" layoutY="334.0" prefHeight="25.0" prefWidth="88.0" text="Car List:" />
-      <Label fx:id="Headline" layoutX="4.0" layoutY="85.0" prefHeight="17.0" prefWidth="639.0" text="Partial Membership Register" />
+      <Label fx:id="Headline" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="68.0" prefHeight="35.0" prefWidth="607.0" text="Partial Membership Register" />
       <Button layoutX="287.0" layoutY="544.0" mnemonicParsing="false" onAction="#OnRemoveSelected" prefHeight="25.0" prefWidth="134.0" text="Remove Selected" />
    </children>
 </AnchorPane>

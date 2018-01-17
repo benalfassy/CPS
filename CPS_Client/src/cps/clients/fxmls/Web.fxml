@@ -13,11 +13,7 @@
       <Button layoutX="30.0" layoutY="323.0" mnemonicParsing="false" onAction="#OnRegister" prefHeight="59.0" prefWidth="172.0" text="Register" />
       <Button layoutX="30.0" layoutY="243.0" mnemonicParsing="false" onAction="#OnMonitorAndControll" prefHeight="59.0" prefWidth="172.0" text="Monitor and Control" />
       <Button layoutX="30.0" layoutY="162.0" mnemonicParsing="false" onAction="#OnOrderInAdvance" prefHeight="59.0" prefWidth="172.0" text="Order In Advance" />
-      <Label fx:id="Headline" layoutX="181.0" layoutY="50.0" text="web menu">
-         <font>
-            <Font name="AR DELANEY" size="62.0" />
-         </font>
-      </Label>
+      <Label fx:id="Headline" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="68.0" prefHeight="35.0" prefWidth="607.0" text="Web Menu" />
       <Button layoutX="30.0" layoutY="480.0" mnemonicParsing="false" onAction="#OnCancelOrder" prefHeight="59.0" prefWidth="172.0" text="Cancel Order" />
    </children>
 </AnchorPane>

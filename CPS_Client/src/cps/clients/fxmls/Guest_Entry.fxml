@@ -18,10 +18,7 @@
       <Label layoutX="50.0" layoutY="320.0" text="Departure time" />
       <Label layoutX="50.0" layoutY="390.0" text="Email" />
       <Label layoutX="50.0" layoutY="180.0" text="ID" />
-      <Label fx:id="Headline" layoutX="188.0" layoutY="60.0" text="Guest Entry">
-         <font>
-            <Font name="AR CENA" size="55.0" />
-         </font>
+      <Label fx:id="Headline" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="68.0" prefHeight="35.0" prefWidth="607.0" text="Guest Entry">
       </Label>
       <ProgressBar fx:id="prgBar" layoutX="174.0" layoutY="491.0" prefHeight="18.0" prefWidth="135.0" visible="false" />
    </children>

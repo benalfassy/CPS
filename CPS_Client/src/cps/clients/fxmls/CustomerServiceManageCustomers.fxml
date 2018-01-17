@@ -8,10 +8,7 @@
 
 <AnchorPane prefHeight="620.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cps.clients.controllers.employee.CustomerServiceManageCustomersController">
    <children>
-      <Label fx:id="Headline" layoutX="3.0" layoutY="69.0" prefHeight="58.0" prefWidth="620.0" text="Manage Customer">
-         <font>
-            <Font name="AR DELANEY" size="24.0" />
-         </font>
+      <Label fx:id="Headline" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="68.0" prefHeight="35.0" prefWidth="607.0" text="Manage Customer">
       </Label>
       <Label layoutX="25.0" layoutY="152.0" text="Customer ID :" />
       <TextField fx:id="customerID" layoutX="171.0" layoutY="147.0" prefHeight="25.0" prefWidth="200.0" />

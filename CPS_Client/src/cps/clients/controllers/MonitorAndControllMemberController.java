@@ -74,11 +74,16 @@ public class MonitorAndControllMemberController extends BaseController
     /**
      * Client clicks on submit button.
      *
-     * @param event the event
+     * @param event
+     *            the event
      */
     @FXML
     void OnSubmit(ActionEvent event)
     {
+	SubscriptionRenewal.setDisable(true);
+	
+	TextMemberDeatil.clear();
+	
 	if (!InputValidator.OrderId(Subscription_ID.getText()))
 	{
 	    DialogBuilder.AlertDialog(AlertType.ERROR, null, Consts.InputsAreIncorrect, null, false);
@@ -119,11 +124,16 @@ public class MonitorAndControllMemberController extends BaseController
 		}
 		
 		if (monitorAndControllfullmembership.GetRequestResult().equals(RequestResult.Succeed))
+		{
 		    TextMemberDeatil.setText(monitorAndControllfullmembership.GetResponseObject().toString());
+		    SubscriptionRenewal.setDisable(false);
+		    
+		}
 		else if (monitorAndControllPartialMember.GetRequestResult().equals(RequestResult.Succeed))
+		{
 		    TextMemberDeatil.setText(monitorAndControllPartialMember.GetResponseObject().toString());
-		
-		SubscriptionRenewal.setDisable(false);
+		    SubscriptionRenewal.setDisable(false);
+		}
 		
 		prgBar.setVisible(false);
 	    });
@@ -135,7 +145,8 @@ public class MonitorAndControllMemberController extends BaseController
     /**
      * Client clicks on subscription renewal button.
      *
-     * @param event the event
+     * @param event
+     *            the event
      */
     @FXML
     void OnSubscriptionRenewal(ActionEvent event)
@@ -183,8 +194,12 @@ public class MonitorAndControllMemberController extends BaseController
 			    .ChangeExpireFullMembership(fullMebershipChanged);
 		    if (ChangeExpiryDateFull.GetRequestResult().equals(RequestResult.Failed))
 		    {
-			DialogBuilder.AlertDialog(AlertType.ERROR, null, Consts.ServerProblemMessage, null, false);
-			return;
+			Platform.runLater(() ->
+			{
+			    DialogBuilder.AlertDialog(AlertType.ERROR, null, Consts.ServerProblemMessage, null, false);
+			    return;
+			});
+			
 		    }
 		}
 		else if (fullOrPartialMembership.equals("partialMembership"))
@@ -193,15 +208,21 @@ public class MonitorAndControllMemberController extends BaseController
 			    .ChangeExpirePartialMembership(parialMebershipChanged);
 		    if (ChangeExpiryDatePartial.GetRequestResult().equals(RequestResult.Failed))
 		    {
-			DialogBuilder.AlertDialog(AlertType.ERROR, null, Consts.ServerProblemMessage, null, false);
-			return;
+			Platform.runLater(() ->
+			{
+			    DialogBuilder.AlertDialog(AlertType.ERROR, null, Consts.ServerProblemMessage, null, false);
+			    return;
+			});
 		    }
 		}
 		
-		DialogBuilder.AlertDialog(AlertType.INFORMATION, Consts.Approved, Consts.SubscriptionRenewal, null,
-			false);
-		
-		myControllersManager.GoToHomePage(Consts.Payment);
+		Platform.runLater(() ->
+		{
+		    DialogBuilder.AlertDialog(AlertType.INFORMATION, Consts.Approved, Consts.SubscriptionRenewal, null,
+			    false);
+		    
+		    myControllersManager.GoToHomePage(Consts.Payment);
+		});
 	    };
 	    
 	    if (fullOrPartialMembership.equals("fullMembership"))
@@ -221,9 +242,10 @@ public class MonitorAndControllMemberController extends BaseController
     }
     
     /**
-     *Client clicks on back button.
+     * Client clicks on back button.
      *
-     * @param event the event
+     * @param event
+     *            the event
      */
     @FXML
     void OnBack(ActionEvent event)
@@ -254,7 +276,8 @@ public class MonitorAndControllMemberController extends BaseController
     /**
      * Set amount to pay.
      *
-     * @param partialMember the partial member
+     * @param partialMember
+     *            the partial member
      * @return the float
      */
     private float AmountToPay(PartialMembership partialMember)

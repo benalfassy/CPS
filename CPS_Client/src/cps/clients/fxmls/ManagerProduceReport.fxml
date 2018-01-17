@@ -11,6 +11,6 @@
       <Button layoutX="167.0" layoutY="280.0" mnemonicParsing="false" onAction="#OnReservationReport" prefHeight="80.0" prefWidth="263.0" text="Reservation Report" />
       <Button layoutX="167.0" layoutY="177.0" mnemonicParsing="false" onAction="#OnComaplaintsReport" prefHeight="80.0" prefWidth="263.0" text="Complaints Report" />
       <Button layoutX="167.0" layoutY="385.0" mnemonicParsing="false" onAction="#OnDisabledParkingSpotReport" prefHeight="80.0" prefWidth="263.0" text="Disabled Parking Spots Report" />
-      <Label fx:id="Headline" layoutX="167.0" layoutY="125.0" prefHeight="17.0" prefWidth="240.0" text="Reports" />
+      <Label fx:id="Headline" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="68.0" prefHeight="35.0" prefWidth="607.0" text="Reports" />
    </children>
 </AnchorPane>

@@ -11,6 +11,6 @@
       <Button layoutX="147.0" layoutY="497.0" mnemonicParsing="false" onAction="#OnLoadRequests" prefHeight="40.0" prefWidth="153.0" text="Load Requests" />
       <Button layoutX="321.0" layoutY="497.0" mnemonicParsing="false" onAction="#OnHandleRequests" prefHeight="40.0" prefWidth="153.0" text="Handle Request" />
       <Button layoutX="24.0" layoutY="554.0" mnemonicParsing="false" onAction="#OnBack" prefHeight="34.0" prefWidth="111.0" text="Back" />
-      <Label fx:id="Headline" layoutX="146.0" layoutY="59.0" prefHeight="57.0" prefWidth="351.0" text="Rate Changes" />
+      <Label fx:id="Headline" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="68.0" prefHeight="35.0" prefWidth="607.0" text="Rate Changes" />
    </children>
 </AnchorPane>

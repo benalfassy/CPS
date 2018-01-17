@@ -17,7 +17,7 @@
             <Font size="17.0" />
          </font>
       </Label>
-      <Label fx:id="Headline" layoutX="165.0" layoutY="98.0" prefHeight="45.0" prefWidth="340.0" text="Status Report" />
+      <Label fx:id="Headline" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="68.0" prefHeight="35.0" prefWidth="607.0" text="Status Report" />
       <ProgressBar fx:id="prgBar" layoutX="200.0" layoutY="310.0" prefHeight="23.0" prefWidth="195.0" visible="false" />
    </children>
 </AnchorPane>

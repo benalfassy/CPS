@@ -18,6 +18,6 @@
       <Label layoutX="35.0" layoutY="384.0" prefHeight="25.0" prefWidth="52.0" text="Email:" />
       <TextField fx:id="email" layoutX="150.0" layoutY="384.0" prefHeight="25.0" prefWidth="174.0" promptText="example@alfasi.com" />
       <Button layoutX="219.0" layoutY="452.0" mnemonicParsing="false" onAction="#OnSubmitAndPay" prefHeight="67.0" prefWidth="182.0" text="Submit and pay" />
-      <Label fx:id="Headline" layoutX="83.0" layoutY="109.0" prefHeight="25.0" prefWidth="501.0" text="Full Memberhip Register" />
+      <Label fx:id="Headline" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="68.0" prefHeight="35.0" prefWidth="607.0" text="Full Memberhip Register" />
    </children>
 </AnchorPane>

@@ -12,10 +12,7 @@
       <Button layoutX="30.0" layoutY="245.0" mnemonicParsing="false" onAction="#OnExit" prefHeight="59.0" prefWidth="172.0" text="Exit" />
       <Button layoutX="30.0" layoutY="331.0" mnemonicParsing="false" onAction="#OnRegister" prefHeight="59.0" prefWidth="172.0" text="Register" />
       <Button layoutX="30.0" layoutY="419.0" mnemonicParsing="false" onAction="#OnMonitorAndControll" prefHeight="59.0" prefWidth="172.0" text="Monitor and Control" />
-      <Label fx:id="Headline" layoutX="187.0" layoutY="69.0" prefHeight="55.0" prefWidth="315.0" text="Kiosk Menu">
-         <font>
-            <Font name="AR CENA" size="55.0" />
-         </font>
+      <Label fx:id="Headline" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="68.0" prefHeight="35.0" prefWidth="607.0" text="Kiosk Menu">
       </Label>
    </children>
 </AnchorPane>

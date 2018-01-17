@@ -10,11 +10,7 @@
 
 <AnchorPane prefHeight="620.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cps.clients.controllers.ComplaintsController">
    <children>
-      <Label fx:id="Headline" layoutX="199.0" layoutY="51.0" prefHeight="86.0" prefWidth="322.0" text="Complaints">
-         <font>
-            <Font name="AR CENA" size="60.0" />
-         </font>
-      </Label>
+      <Label fx:id="Headline" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="68.0" prefHeight="35.0" prefWidth="607.0" text="Complaints"> </Label>
       <Label layoutX="114.0" layoutY="150.0" prefHeight="17.0" prefWidth="92.0" text="Customer ID" />
       <TextField fx:id="memberID" layoutX="234.0" layoutY="146.0" />
       <Label layoutX="244.0" layoutY="186.0" prefHeight="25.0" prefWidth="155.0" text="Complaint Deatils" />
