@@ -31,7 +31,8 @@ import javafx.scene.control.MenuButton;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class OrderInAdvanceController.
+ * The Class OrderInAdvanceController. 
+ * Used for ordering a parking in advance.
  */
 public class OrderInAdvanceController extends BaseController
 {
@@ -97,7 +98,7 @@ public class OrderInAdvanceController extends BaseController
     }
     
     /**
-     * Client clicks on payment button.
+     * Sets the payment scene and submits the reservation after approving the payment.
      *
      * @param event the event
      */
@@ -147,7 +148,7 @@ public class OrderInAdvanceController extends BaseController
     }
     
     /**
-     * Client clicks on back button.
+     * Sets the previous scene.
      *
      * @param event the event
      */
@@ -160,7 +161,7 @@ public class OrderInAdvanceController extends BaseController
     }
     
     /**
-     * Try construct order in advance.
+     * Creates the reservation according to the details filled by the customer.
      *
      * @return true, if successful
      */
@@ -184,7 +185,7 @@ public class OrderInAdvanceController extends BaseController
     }
     
     /**
-     *Sets the payment amount.
+     * Calculating the reservation's price.
      *
      * @return the float
      */
@@ -202,7 +203,7 @@ public class OrderInAdvanceController extends BaseController
     }
     
     /**
-     * Checks if is input legal.
+     * Checks if the input is legal.
      *
      * @return true, if successful
      */

@@ -21,6 +21,7 @@ import javafx.scene.control.TextField;
 // TODO: Auto-generated Javadoc
 /**
  * The Class MonitorAndControlCustomerController.
+ * Used for getting a customer's information.
  */
 public class MonitorAndControlCustomerController extends BaseController
 {
@@ -38,7 +39,7 @@ public class MonitorAndControlCustomerController extends BaseController
     private ProgressBar prgBar;
     
     /**
-     * Client clicks on submit button.
+     * Prints the selected client's information.
      *
      * @param event
      *            the event
@@ -86,7 +87,7 @@ public class MonitorAndControlCustomerController extends BaseController
     }
     
     /**
-     * Client clicks on back button .
+     * Sets the previous scene.
      *
      * @param event
      *            the event

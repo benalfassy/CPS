@@ -14,7 +14,7 @@ import javafx.util.Pair;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class Employees.
+ * The Employees Entry.
  */
 public class Employees extends Application {
 	

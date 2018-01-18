@@ -19,6 +19,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 // TODO: Auto-generated Javadoc
 /**
  * The Class ReservationReportController.
+ * Used for displaying a reservation report.
  */
 public class ReservationReportController extends EmployeeBaseController {
 	
@@ -93,8 +94,7 @@ public class ReservationReportController extends EmployeeBaseController {
 		
 
     /**
-     * On show .
-     *Produces the report from the relevant data after getting it from the DB 
+     * Displays the reservation report. 
      * @param event the event
      */
     @FXML
@@ -130,8 +130,7 @@ public class ReservationReportController extends EmployeeBaseController {
     }
 
     /**
-     * On back.
-     *Sets the Previews scene
+     * Sets the Previous scene.
      * @param event the event
      */
     @FXML

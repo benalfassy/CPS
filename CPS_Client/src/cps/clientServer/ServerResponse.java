@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class ServerResponse. This class is the class that the server returns.
+ * The Class ServerResponse. This class is the object that the server returns.
  *
  * @param <T>
  *            the generic type

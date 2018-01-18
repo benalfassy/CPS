@@ -51,7 +51,7 @@ public class ChangeRatesResponse implements Serializable
     }
     
     /**
-     * Gets the checks if is approved.
+     * Gets the checks if it is approved.
      *
      * @return the checks if is approved
      */

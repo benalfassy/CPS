@@ -16,7 +16,7 @@ public class MonitorAndControllController extends BaseController
     private Label Headline;
     
     /**
-     * Client clicks on member button.
+     * Sets the monitor and control member scene.
      *
      * @param event
      *            the event
@@ -28,7 +28,7 @@ public class MonitorAndControllController extends BaseController
     }
     
     /**
-     * Client clicks on not a member button.
+     * Sets the monitor and control not member scene.
      *
      * @param event
      *            the event
@@ -40,7 +40,7 @@ public class MonitorAndControllController extends BaseController
     }
     
     /**
-     * Client clicks on customer info button.
+     * Sets the monitor and control customer scene.
      *
      * @param event
      *            the event
@@ -52,7 +52,7 @@ public class MonitorAndControllController extends BaseController
     }
     
     /**
-     * Client clicks on back button.
+     * Sets the previous scene.
      *
      * @param event
      *            the event

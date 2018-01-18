@@ -17,7 +17,8 @@ import javafx.scene.control.TextField;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class PaymentController.
+ * The Class PaymentController. 
+ * Used for all payments.
  */
 public class PaymentController extends BaseController
 {
@@ -53,7 +54,7 @@ public class PaymentController extends BaseController
     }
     
     /**
-     * Sets the payment amount.
+     * Prints the payment amount.
      *
      * @param paymentAmount the new payment amount
      */
@@ -63,7 +64,7 @@ public class PaymentController extends BaseController
     }
     
     /**
-     * Sets the on submit.
+     * Sets the outcome of the payment check.
      *
      * @param afterPaymentDetailsCheck the after payment details check
      */
@@ -73,7 +74,7 @@ public class PaymentController extends BaseController
     }
     
     /**
-     * Sets the order details.
+     * Prints the order's details.
      *
      * @param order the order
      */
@@ -83,7 +84,7 @@ public class PaymentController extends BaseController
     }
     
     /**
-     * Client clicks on back button.
+     * Sets the previous scene.
      *
      * @param event the event
      */
@@ -94,7 +95,7 @@ public class PaymentController extends BaseController
     }
     
     /**
-     *Client clicks on submit button.
+     * Checks if the payment is approved and returns the outcome to the function that called for the payment.
      *
      * @param event the event
      */
@@ -124,7 +125,7 @@ public class PaymentController extends BaseController
     }
     
     /**
-     * Checks if is payment details accepted.
+     * Checks if the payment details are correct.
      *
      * @return true, if successful
      */

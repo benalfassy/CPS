@@ -22,6 +22,7 @@ import javafx.scene.control.ProgressBar;
 // TODO: Auto-generated Javadoc
 /**
  * The Class ComplaintsController.
+ * Used for submitting complaints about the company.
  */
 public class ComplaintsController extends BaseController
 {
@@ -41,9 +42,10 @@ public class ComplaintsController extends BaseController
     Complaint complaint;
     
     /**
-     * On submit.
+     * Submits the complaint with the details filled by the client.
      *
-     * @param event the event
+     * @param event
+     * 			 the event
      */
     @FXML
     void OnSubmit(ActionEvent event)
@@ -102,9 +104,10 @@ public class ComplaintsController extends BaseController
     }
     
     /**
-     * On back.
+     * Sets the previous scene.
      *
-     * @param event the event
+     * @param event
+     * 			 the event
      */
     @FXML
     void OnBack(ActionEvent event)

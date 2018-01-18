@@ -22,6 +22,7 @@ import cps.entities.enums.ParkingSpotCondition;
 // TODO: Auto-generated Javadoc
 /**
  * The Class Pdf_Builder.
+ * Used for building a pdf according to a status report.
  */
 public class Pdf_Builder {
 	
@@ -39,7 +40,7 @@ public class Pdf_Builder {
 	}
 	
 	/**
-	 * Builds the.
+	 * Builds the PDF.
 	 *
 	 * @param statusReport the status report
 	 * @return true, if successful

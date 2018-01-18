@@ -21,7 +21,8 @@ import javafx.scene.control.TextField;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class FullMembershipRegisterController.
+ * The Class FullMembershipRegisterController. 
+ * Used for registering for a full membership.
  */
 public class FullMembershipRegisterController extends BaseController
 {
@@ -58,7 +59,7 @@ public class FullMembershipRegisterController extends BaseController
     }
     
     /**
-     * Client clicks on back button.
+     * Sets the previous scene.
      *
      * @param event
      *            the event
@@ -71,7 +72,8 @@ public class FullMembershipRegisterController extends BaseController
     }
     
     /**
-     * Client clicks on submit and pay button.
+     * Calculates the price of the membership and sets the payment controller.
+     * After approving the payment, creates the new full membership.
      *
      * @param event
      *            the event
@@ -132,9 +134,9 @@ public class FullMembershipRegisterController extends BaseController
     }
     
     /**
-     * Checks if is input legal.
+     * Checks if the input is legal.
      *
-     * @return true, if successful
+     * @return True, if successful
      */
     private boolean IsInputLegal()
     {

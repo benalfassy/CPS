@@ -31,6 +31,7 @@ import javafx.scene.control.Alert.AlertType;
 // TODO: Auto-generated Javadoc
 /**
  * The Class KioskExitController.
+ * Used for exiting the parking lot.
  */
 public class KioskExitController extends BaseController
 {
@@ -69,7 +70,7 @@ public class KioskExitController extends BaseController
     }
     
     /**
-     * On member exit.
+     * Tells the robot to get the Member's car.
      *
      * @param event the event
      */
@@ -124,7 +125,8 @@ public class KioskExitController extends BaseController
     }
     
     /**
-     * Client clicks on guest exit button.
+     * Tells the robot to get the Guest's car.
+     * Calculating the price and sets the payment scene.
      *
      * @param event the event
      */
@@ -205,7 +207,7 @@ public class KioskExitController extends BaseController
     }
     
     /**
-     * Client clicks on back button .
+     * Sets the previous scene.
      *
      * @param event the event
      */

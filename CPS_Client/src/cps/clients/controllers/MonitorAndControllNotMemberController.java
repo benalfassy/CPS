@@ -25,6 +25,7 @@ import javafx.scene.control.ProgressBar;
 // TODO: Auto-generated Javadoc
 /**
  * The Class MonitorAndControllNotMemberController.
+ * Used for getting a reservation's information.
  */
 public class MonitorAndControllNotMemberController extends BaseController
 {
@@ -42,7 +43,7 @@ public class MonitorAndControllNotMemberController extends BaseController
     private ProgressBar prgBar;
     
     /**
-     * Client clicks on back button.
+     * Prints the selected reservation's information.
      *
      * @param event the event
      */
@@ -87,7 +88,7 @@ public class MonitorAndControllNotMemberController extends BaseController
     }
     
     /**
-     * Client clicks on back button.
+     * Sets the previous scene.
      *
      * @param event the event
      */

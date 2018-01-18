@@ -24,6 +24,7 @@ import javafx.scene.control.TextField;
 // TODO: Auto-generated Javadoc
 /**
  * The Class CustomerServiceManageCustomersController.
+ * Used for acquiring information about a customer and refunding him.
  */
 public class CustomerServiceManageCustomersController extends EmployeeBaseController
 {
@@ -46,7 +47,7 @@ public class CustomerServiceManageCustomersController extends EmployeeBaseContro
     private Customer customer;
     
     /**
-     * On submit.
+     * Prints the selected customer's information.
      *
      * @param event the event
      */
@@ -95,7 +96,7 @@ public class CustomerServiceManageCustomersController extends EmployeeBaseContro
     }
     
     /**
-     * On back.
+     * Sets the previous scene.
      *
      * @param event the event
      */
@@ -106,7 +107,7 @@ public class CustomerServiceManageCustomersController extends EmployeeBaseContro
     }
     
     /**
-     * On refund.
+     * Refunds the selected customer.
      *
      * @param event the event
      */

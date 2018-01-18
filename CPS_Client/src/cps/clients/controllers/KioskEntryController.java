@@ -33,7 +33,8 @@ import javafx.scene.control.ProgressBar;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class KioskEntryController.
+ * The Class KioskEntryController. 
+ * Used for entering the parking lot.
  */
 public class KioskEntryController extends BaseController
 {
@@ -77,7 +78,7 @@ public class KioskEntryController extends BaseController
     }
     
     /**
-     * Client clicks on guest entry button.
+     * Sets the guest entry scene.
      *
      * @param event
      *            the event
@@ -93,7 +94,7 @@ public class KioskEntryController extends BaseController
     }
     
     /**
-     * Client clicks on pre-order button.
+     * Opens a dialog window and tells the robot to park the client's car, according to the details filled by the client.
      *
      * @param event
      *            the event
@@ -228,7 +229,7 @@ public class KioskEntryController extends BaseController
     }
     
     /**
-     * Client clicks on member entry button.
+     * Opens a dialog window with the options for a full or a partial membership, and calls the handle function.
      *
      * @param event
      *            the event
@@ -255,7 +256,7 @@ public class KioskEntryController extends BaseController
     }
     
     /**
-     * Client clicks on back button.
+     * Sets the previous scene.
      *
      * @param event
      *            the event

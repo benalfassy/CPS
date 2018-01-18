@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class ClientRequest. This is the class that the server accepts.
+ * The Class ClientRequest. This is the object that the server accepts.
  */
 public class ClientRequest implements Serializable
 {

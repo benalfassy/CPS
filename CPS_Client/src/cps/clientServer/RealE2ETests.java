@@ -454,7 +454,7 @@ public class RealE2ETests
 	
 	System.out.println(serverResponse.GetResponseObject().getTable() + "\n");
 	
-	Pdf_Builder pdf = new Pdf_Builder("C:\\Users\\Hashi\\Desktop\\New folder (2)");
+	Pdf_Builder pdf = new Pdf_Builder("enter directory path here");
 	
 	pdf.build(serverResponse.GetResponseObject());
 	

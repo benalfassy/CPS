@@ -42,8 +42,7 @@ public class EmployeesLoginController extends EmployeeBaseController
     private ProgressIndicator prgBar;
     
     /**
-     * On login.
-     *Logins to the employee account if he isn't already logged in.
+     * Logins to the employee's account if he isn't already logged in.
      * @param event the event
      * @throws InterruptedException the interrupted exception
      * @throws ExecutionException the execution exception

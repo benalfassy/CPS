@@ -27,6 +27,7 @@ import javafx.scene.control.TextField;
 // TODO: Auto-generated Javadoc
 /**
  * The Class MonitorAndControllMemberController.
+ * Used for getting a membership's information.
  */
 public class MonitorAndControllMemberController extends BaseController
 {
@@ -72,10 +73,10 @@ public class MonitorAndControllMemberController extends BaseController
     PartialMembership parialMebershipChanged = null;
     
     /**
-     * Client clicks on submit button.
+     * Prints the selected membership's information.
      *
      * @param event
-     *            the event
+     * 			 the event
      */
     @FXML
     void OnSubmit(ActionEvent event)
@@ -143,10 +144,11 @@ public class MonitorAndControllMemberController extends BaseController
     }
     
     /**
-     * Client clicks on subscription renewal button.
+     * Renews a membership for an additional month.
+     * Calculates the price of the renewal and sets the payment scene.
      *
-     * @param event
-     *            the event
+     * @param event 
+     * 			the event
      */
     @FXML
     void OnSubscriptionRenewal(ActionEvent event)
@@ -242,8 +244,8 @@ public class MonitorAndControllMemberController extends BaseController
     }
     
     /**
-     * Client clicks on back button.
-     *
+     * Sets the previous scene.
+     * 
      * @param event
      *            the event
      */
@@ -255,7 +257,7 @@ public class MonitorAndControllMemberController extends BaseController
     }
     
     /**
-     * Set full or partial membership.
+     * Checks if the membership is full or partial. 
      */
     void SetfullOrPartialMembership()
     {
@@ -274,7 +276,7 @@ public class MonitorAndControllMemberController extends BaseController
     }
     
     /**
-     * Set amount to pay.
+     * Calculates the price of a partial membership renewal.
      *
      * @param partialMember
      *            the partial member
