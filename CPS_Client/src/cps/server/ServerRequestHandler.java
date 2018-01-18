@@ -1226,7 +1226,7 @@ public class ServerRequestHandler implements Closeable// pLw9Zaqp{ey`2,Ve
 	    LocalDateTime from = LocalDateTime.of(reservation.getArrivalDate(), reservation.getArrivalHour());
 	    LocalDateTime to = LocalDateTime.of(reservation.getLeavingDate(), reservation.getLeavingHour());
 	    
-	    if (!IsParkingSpotFree(reservation.getParkinglot(), from, to))
+	    if (!reservation.getReservationType().equals(ReservationType.Local) && !IsParkingSpotFree(reservation.getParkinglot(), from, to))
 	    {
 		serverResponse = new ServerResponse<Reservation>(RequestResult.ResourceNotAvaillable, reservation,
 			"parking lot full in the requested time");

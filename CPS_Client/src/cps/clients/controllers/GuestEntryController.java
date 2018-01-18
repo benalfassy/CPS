@@ -128,19 +128,12 @@ public class GuestEntryController extends BaseController
 		    RequestsSender.AddCustomerIfNotExists(customer);
 		});
 		
-		CompletableFuture<ArrayList<Parkinglot>> task = CompletableFuture.supplyAsync(() ->
-		{
-		    return RequestsSender.GetAllParkinglots(true).GetResponseObject();
-		});
-		
 		AddRealTimeParkingRequest request = new AddRealTimeParkingRequest(parkinglotName, LocalDateTime.now(),
 			LocalDateTime.of(LocalDate.now(), LocalTime.parse(departureTime.getText())),
 			carNumber.getText(), true);
 		
 		ServerResponse<AddRealTimeParkingRequest> insertCarResponse = RequestsSender.TryInsertCar(request);
-		
-		freeParkinglots = task.get();
-		
+				
 		Platform.runLater(() ->
 		{
 		    prgBar.setVisible(false);
@@ -150,6 +143,8 @@ public class GuestEntryController extends BaseController
 		    if (insertCarResponse.GetRequestResult().equals(RequestResult.ResourceNotAvaillable))
 		    {
 			ArrayList<String> freeParkinglotsNames = new ArrayList<>();
+			
+			freeParkinglots = RequestsSender.GetAllParkinglots(true).GetResponseObject();
 			
 			for (Parkinglot p : freeParkinglots)
 			{
