@@ -960,8 +960,8 @@ public class ServerRequestHandler implements Closeable// pLw9Zaqp{ey`2,Ve
 	{
 	    // Check if the car is not singed already:
 	    
-	    PreparedStatement preparedStatement = mySqlConnection.prepareStatement(
-		    "SELECT * FROM FullMemberships WHERE  carNumber = ? ");
+	    PreparedStatement preparedStatement = mySqlConnection
+		    .prepareStatement("SELECT * FROM FullMemberships WHERE  carNumber = ? ");
 	    
 	    preparedStatement.setString(1, fullMembership.GetCarNumber());
 	    
@@ -973,8 +973,8 @@ public class ServerRequestHandler implements Closeable// pLw9Zaqp{ey`2,Ve
 		
 		if (expiryDateTime.isAfter(LocalDate.now()))
 		{
-		    ServerResponse<FullMembership> serverResponse = new ServerResponse<>(RequestResult.AlredyExist, fullMembership,
-			    "car exists");
+		    ServerResponse<FullMembership> serverResponse = new ServerResponse<>(RequestResult.AlredyExist,
+			    fullMembership, "car exists");
 		    
 		    CPS_Tracer.TraceInformation("Server response to client after register: \n" + serverResponse);
 		    
@@ -2550,10 +2550,13 @@ public class ServerRequestHandler implements Closeable// pLw9Zaqp{ey`2,Ve
 		}
 		while (resultSet.next());
 		
-		arrExercised.add(exercised);
-		
-		arrCancelled.add(cancelled);
-		
+		if (tempDate.isBefore(LocalDate.now()))
+		{
+		    
+		    arrExercised.add(exercised);
+		    
+		    arrCancelled.add(cancelled);
+		}
 		resultSet.first();
 		
 		tempDate = tempDate.plusDays(1);
@@ -2623,8 +2626,10 @@ public class ServerRequestHandler implements Closeable// pLw9Zaqp{ey`2,Ve
 		
 		disabled /= 3600;
 		
-		arrDisabled.add(disabled);
-		
+		if (tempDateTime.isBefore(LocalDate.now().atStartOfDay()))
+		{
+		    arrDisabled.add(disabled);
+		}
 		resultSet2.first();
 		
 		tempDateTime = tempDateTime.plusDays(1);
