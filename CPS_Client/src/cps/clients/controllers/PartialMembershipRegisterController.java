@@ -11,6 +11,7 @@ import cps.clientServer.ServerResponse;
 import cps.entities.Customer;
 import cps.entities.Parkinglot;
 import cps.entities.PartialMembership;
+import cps.entities.enums.ParkinglotStatus;
 import cps.utilities.Consts;
 import cps.utilities.DialogBuilder;
 import cps.utilities.InputValidator;
@@ -29,8 +30,8 @@ import javafx.scene.control.TextField;
 
 // TODO: Auto-generated Javadoc 
 /**
- * The Class PartialMembershipRegisterController.
- * Used for registering for a partial membership.
+ * The Class PartialMembershipRegisterController. Used for registering for a
+ * partial membership.
  */
 public class PartialMembershipRegisterController extends BaseController
 {
@@ -90,14 +91,18 @@ public class PartialMembershipRegisterController extends BaseController
 	int length = initListParkinglot.GetResponseObject().size();
 	for (int i = 0; i < length; i++)
 	{
-	    MenuItem item = new MenuItem(initListParkinglot.GetResponseObject().get(i).getParkinglotName());
-	    item.setOnAction(a ->
+	    if (initListParkinglot.GetResponseObject().get(i).getStatus().equals(ParkinglotStatus.Open))
 	    {
-		parking_Lot = (item.getText());
-		parkingLot.setText(parking_Lot);
-	    });
-	    parkingLot.getItems().add(item);
-	    parkinglist.add(initListParkinglot.GetResponseObject().get(i));
+		
+		MenuItem item = new MenuItem(initListParkinglot.GetResponseObject().get(i).getParkinglotName());
+		item.setOnAction(a ->
+		{
+		    parking_Lot = (item.getText());
+		    parkingLot.setText(parking_Lot);
+		});
+		parkingLot.getItems().add(item);
+		parkinglist.add(initListParkinglot.GetResponseObject().get(i));
+	    }
 	    
 	}
     }
@@ -154,7 +159,8 @@ public class PartialMembershipRegisterController extends BaseController
 		
 		if (registerPartialMembershipResponse.GetRequestResult().equals(RequestResult.AlredyExist))
 		{
-		    DialogBuilder.AlertDialog(AlertType.ERROR, null, "One of your cars is already registered to this parking lot.", null, false);
+		    DialogBuilder.AlertDialog(AlertType.ERROR, null,
+			    "One of your cars is already registered to this parking lot.", null, false);
 		    
 		    return;
 		}

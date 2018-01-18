@@ -90,7 +90,7 @@ public class Reservation implements Serializable
 	return "order ID: " + orderId + "\nReservation Type: " + reservationType + "\nCustomer ID: " + customerId
 		+ "\nParkinglot: " + parkingLot + "\nCar Number: " + carNumber + "\nArrival Date: " + arrivalDate
 		+ "\nLeaving Date: " + leavingDate + "\nArrival Hour: " + arrivalHour + "\nLeaving Hour: " + leavingHour
-		+ "\nReservation status: " + reservationStatus + "\nPrice: " + price;
+		+ "\nReservation status: " + reservationStatus + "\nEstimated price: " + price;
     }
     
     /**

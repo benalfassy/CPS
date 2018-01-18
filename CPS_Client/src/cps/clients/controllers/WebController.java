@@ -54,7 +54,8 @@ public class WebController extends BaseController
     }
     
     /**
-     * Opens a dialog window with the option to choose a full or partial membership.
+     * Opens a dialog window with the option to choose a full or partial
+     * membership.
      *
      * @param event
      *            the event
@@ -107,7 +108,8 @@ public class WebController extends BaseController
     }
     
     /**
-     * Opens a dialog window used to fill the reservation id and cancels the reservation.
+     * Opens a dialog window used to fill the reservation id and cancels the
+     * reservation.
      *
      * @param event
      *            the event
@@ -183,9 +185,7 @@ public class WebController extends BaseController
 		else
 		{
 		    DialogBuilder.AlertDialog(AlertType.INFORMATION, null,
-			    "We cancelled your reservation.\nUnfortunately we cant credit your account."
-				    + reservation.getPrice() / 10 + "$",
-			    null, false);
+			    "We cancelled your reservation.\nUnfortunately we cant credit your account.", null, false);
 		    
 		    CompletableFuture.runAsync(() ->
 		    {

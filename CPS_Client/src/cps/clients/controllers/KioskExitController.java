@@ -30,8 +30,7 @@ import javafx.scene.control.Alert.AlertType;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class KioskExitController.
- * Used for exiting the parking lot.
+ * The Class KioskExitController. Used for exiting the parking lot.
  */
 public class KioskExitController extends BaseController
 {
@@ -50,7 +49,8 @@ public class KioskExitController extends BaseController
     /**
      * Instantiates a new kiosk exit controller.
      *
-     * @throws IOException Signals that an I/O exception has occurred.
+     * @throws IOException
+     *             Signals that an I/O exception has occurred.
      */
     public KioskExitController() throws IOException
     {
@@ -72,7 +72,8 @@ public class KioskExitController extends BaseController
     /**
      * Tells the robot to get the Member's car.
      *
-     * @param event the event
+     * @param event
+     *            the event
      */
     @FXML
     void OnMemberExit(ActionEvent event)
@@ -125,10 +126,11 @@ public class KioskExitController extends BaseController
     }
     
     /**
-     * Tells the robot to get the Guest's car.
-     * Calculating the price and sets the payment scene.
+     * Tells the robot to get the Guest's car. Calculating the price and sets
+     * the payment scene.
      *
-     * @param event the event
+     * @param event
+     *            the event
      */
     @FXML
     void OnGuestExit(ActionEvent event)
@@ -184,8 +186,8 @@ public class KioskExitController extends BaseController
 			});
 		    };
 		    
-		    float paymentAmount = LocalDateTime.of(reservation.getArrivalDate(), reservation.getArrivalHour())
-			    .until(LocalDateTime.now(), ChronoUnit.HOURS) * parkinglot.getGuestRate();
+		    float paymentAmount = (LocalDateTime.of(reservation.getArrivalDate(), reservation.getArrivalHour())
+			    .until(LocalDateTime.now(), ChronoUnit.HOURS) + 1) * parkinglot.getGuestRate();
 		    
 		    myControllersManager.Payment(reservation, paymentAmount, afterPayment, Consts.KioskExit);
 		}
@@ -209,7 +211,8 @@ public class KioskExitController extends BaseController
     /**
      * Sets the previous scene.
      *
-     * @param event the event
+     * @param event
+     *            the event
      */
     @FXML
     void OnBack(ActionEvent event)

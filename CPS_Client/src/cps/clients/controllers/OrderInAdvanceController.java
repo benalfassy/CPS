@@ -13,6 +13,7 @@ import cps.clientServer.ServerResponse;
 import cps.entities.Customer;
 import cps.entities.Parkinglot;
 import cps.entities.Reservation;
+import cps.entities.enums.ParkinglotStatus;
 import cps.entities.enums.ReservationStatus;
 import cps.entities.enums.ReservationType;
 import cps.utilities.Consts;
@@ -31,38 +32,37 @@ import javafx.scene.control.MenuButton;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class OrderInAdvanceController. 
- * Used for ordering a parking in advance.
+ * The Class OrderInAdvanceController. Used for ordering a parking in advance.
  */
 public class OrderInAdvanceController extends BaseController
 {
     
-    @FXML 
+    @FXML
     private TextField carNumber;
     
     @FXML
-    private MenuButton parkingLot; 
+    private MenuButton parkingLot;
     
     @FXML
     private Label Headline;
     
-    @FXML 
+    @FXML
     private TextField arrivalHour;
     
-    @FXML 
-    private TextField leavingHour; 
+    @FXML
+    private TextField leavingHour;
     
-    @FXML 
-    private TextField customerId; 
+    @FXML
+    private TextField customerId;
     
-    @FXML 
-    private TextField email; 
+    @FXML
+    private TextField email;
     
-    @FXML 
+    @FXML
     private DatePicker arrivalDate;
     
     @FXML
-    private DatePicker leavingDate; 
+    private DatePicker leavingDate;
     
     ArrayList<Parkinglot> parkinglist = new ArrayList<Parkinglot>();
     
@@ -86,21 +86,27 @@ public class OrderInAdvanceController extends BaseController
 	int length = initListParkinglot.GetResponseObject().size();
 	for (int i = 0; i < length; i++)
 	{
-	    MenuItem item = new MenuItem(initListParkinglot.GetResponseObject().get(i).getParkinglotName());
-	    item.setOnAction(a ->
+	    if (initListParkinglot.GetResponseObject().get(i).getStatus().equals(ParkinglotStatus.Open))
 	    {
-		parking_Lot = (item.getText());
-		parkingLot.setText(parking_Lot);
-	    });
-	    parkingLot.getItems().add(item);
-	    parkinglist.add(initListParkinglot.GetResponseObject().get(i));
+		
+		MenuItem item = new MenuItem(initListParkinglot.GetResponseObject().get(i).getParkinglotName());
+		item.setOnAction(a ->
+		{
+		    parking_Lot = (item.getText());
+		    parkingLot.setText(parking_Lot);
+		});
+		parkingLot.getItems().add(item);
+		parkinglist.add(initListParkinglot.GetResponseObject().get(i));
+	    }
 	}
     }
     
     /**
-     * Sets the payment scene and submits the reservation after approving the payment.
+     * Sets the payment scene and submits the reservation after approving the
+     * payment.
      *
-     * @param event the event
+     * @param event
+     *            the event
      */
     @FXML
     void OnPayment(ActionEvent event)
@@ -110,7 +116,7 @@ public class OrderInAdvanceController extends BaseController
 	{
 	    return;
 	}
-		
+	
 	Consumer<Void> afterPayment = Void ->
 	{
 	    ServerResponse<Reservation> OrderInAdvanceResponse = RequestsSender.Reservation(reservation);
@@ -129,7 +135,8 @@ public class OrderInAdvanceController extends BaseController
 		
 		if (OrderInAdvanceResponse.GetRequestResult().equals(RequestResult.ResourceNotAvaillable))
 		{
-		    DialogBuilder.AlertDialog(AlertType.ERROR, null, "We are sorry, the parking lot is full.", null, false);
+		    DialogBuilder.AlertDialog(AlertType.ERROR, null, "We are sorry, the parking lot is full.", null,
+			    false);
 		    
 		    return;
 		}
@@ -150,7 +157,8 @@ public class OrderInAdvanceController extends BaseController
     /**
      * Sets the previous scene.
      *
-     * @param event the event
+     * @param event
+     *            the event
      */
     @FXML
     void OnBack(ActionEvent event)

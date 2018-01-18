@@ -3,12 +3,15 @@ package cps.clients.controllers.employee;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.ArrayList;
 
 import cps.clientServer.RequestResult;
 import cps.clientServer.RequestsSender;
 import cps.clientServer.ServerResponse;
 import cps.entities.Customer;
+import cps.entities.Parkinglot;
 import cps.entities.Reservation;
+import cps.entities.enums.ParkinglotStatus;
 import cps.entities.enums.ReservationStatus;
 import cps.entities.enums.ReservationType;
 import cps.utilities.Consts;
@@ -20,39 +23,37 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class ReserveParkingSpotController.
- * Used for reserving a parking spot.
+ * The Class ReserveParkingSpotController. Used for reserving a parking spot.
  */
 public class ReserveParkingSpotController extends EmployeeBaseController
 {
     
-    @FXML 
+    @FXML
     private TextField carNumber;
     
-    @FXML 
-    private TextField parkingLot; 
+    @FXML
+    private TextField arrivalHour;
     
-    @FXML 
-    private TextField arrivalHour; 
-    
-    @FXML 
+    @FXML
     private TextField leavingHour;
     
     @FXML
-    private TextField customerId; 
+    private TextField customerId;
     
-    @FXML 
-    private TextField email; 
+    @FXML
+    private TextField email;
     
     @FXML
     private DatePicker arrivalDate;
     
     @FXML
-    private DatePicker leavingDate; 
+    private DatePicker leavingDate;
     
     @FXML
     private Label Headline;
@@ -61,21 +62,50 @@ public class ReserveParkingSpotController extends EmployeeBaseController
     
     Customer customer;
     
+    ArrayList<Parkinglot> parkinglist = new ArrayList<Parkinglot>();
+    
+    String parking_Lot=null;
+    
+    @FXML
+    private MenuButton parkingLot;
+    
     /**
      * Initialize.
      */
     @FXML
     void initialize()
     {
+	//parkingLot.getItems().setAll(null);
+	
 	arrivalDate.setEditable(true);
 	arrivalDate.setValue(LocalDate.now());
 	leavingDate.setEditable(true);
 	leavingDate.setValue(LocalDate.now());
+	
+	ServerResponse<ArrayList<Parkinglot>> initListParkinglot = RequestsSender.GetAllParkinglots(false);
+	int length = initListParkinglot.GetResponseObject().size();
+	for (int i = 0; i < length; i++)
+	{
+	    if (initListParkinglot.GetResponseObject().get(i).getStatus().equals(ParkinglotStatus.Open))
+	    {
+		
+		MenuItem item = new MenuItem(initListParkinglot.GetResponseObject().get(i).getParkinglotName());
+		item.setOnAction(a ->
+		{
+		    parking_Lot = (item.getText());
+		    parkingLot.setText(parking_Lot);
+		});
+		parkingLot.getItems().add(item);
+		parkinglist.add(initListParkinglot.GetResponseObject().get(i));
+	    }
+	}
     }
     
     /**
      * Submits the new reservation.
-     * @param event the event
+     * 
+     * @param event
+     *            the event
      */
     @FXML
     void OnSubmit(ActionEvent event)
@@ -106,7 +136,9 @@ public class ReserveParkingSpotController extends EmployeeBaseController
     
     /**
      * Sets the Previous scene.
-     * @param event the event
+     * 
+     * @param event
+     *            the event
      */
     @FXML
     void OnBack(ActionEvent event)
@@ -128,7 +160,7 @@ public class ReserveParkingSpotController extends EmployeeBaseController
 	    return false;
 	}
 	
-	reservation = new Reservation(ReservationType.Employee, customerId.getText(), parkingLot.getText(),
+	reservation = new Reservation(ReservationType.Employee, customerId.getText(), parking_Lot,
 		carNumber.getText(), arrivalDate.getValue(), leavingDate.getValue(),
 		LocalTime.parse(arrivalHour.getText()), LocalTime.parse(leavingHour.getText()),
 		ReservationStatus.NotStarted, 0);
@@ -237,7 +269,7 @@ public class ReserveParkingSpotController extends EmployeeBaseController
 	    }
 	}
 	
-	if (parkingLot == null || parkingLot.getText().equals(""))
+	if (parking_Lot == null)
 	{
 	    result = false;
 	    parkingLot.setStyle("-fx-background-color: tomato;");
