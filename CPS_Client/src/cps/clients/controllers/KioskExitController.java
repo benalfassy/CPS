@@ -4,15 +4,18 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
 import cps.clientServer.RequestResult;
 import cps.clientServer.RequestsSender;
 import cps.clientServer.ServerResponse;
+import cps.entities.CreditCustomerRequest;
 import cps.entities.FullMembership;
 import cps.entities.Parkinglot;
 import cps.entities.PartialMembership;
@@ -162,13 +165,17 @@ public class KioskExitController extends BaseController
 		return;
 	    }
 	    
+	    // implicit succeed.
+	    
 	    ServerResponse<RemoveCarRequest> removeRequest = RequestsSender
 		    .RemoveCar(new RemoveCarRequest(parkinglotName, inputs.get(1)));
+	    
 	    if (removeRequest.GetRequestResult().equals(RequestResult.NotFound))
 	    {
 		DialogBuilder.AlertDialog(AlertType.ERROR, null, "Order not found.", null, false);
 		return;
 	    }
+	    
 	    if (removeRequest.GetRequestResult().equals(RequestResult.Succeed))
 	    {
 		Reservation reservation = reservationResponse.GetResponseObject();
@@ -193,6 +200,55 @@ public class KioskExitController extends BaseController
 		}
 		else
 		{
+		    LocalDateTime exiTime = LocalDateTime.of(reservation.getLeavingDate(),
+			    reservation.getLeavingHour());
+		    
+		    if (LocalDateTime.now().isAfter(exiTime))
+		    {
+			DialogBuilder.AlertDialog(AlertType.WARNING, Consts.Approved,
+				"You have exceeded from your departure time.\nYour departure time was: "
+					+ reservation.getLeavingDate() + " "
+					+ reservation.getLeavingHour().format(DateTimeFormatter.ISO_LOCAL_TIME),
+				null, false);
+			
+			Consumer<Void> afterPayment = Void ->
+			{
+			    Platform.runLater(() ->
+			    {
+				DialogBuilder.AlertDialog(AlertType.INFORMATION, Consts.Approved,
+					Consts.LeaveTheParkinglotMessage, null, false);
+				
+				myControllersManager.GoToHomePage(Consts.Payment);
+			    });
+			};
+			
+			float paymentAmount = (LocalDateTime
+				.of(reservation.getLeavingDate(), reservation.getLeavingHour())
+				.until(LocalDateTime.now(), ChronoUnit.HOURS) + 1) * parkinglot.getGuestRate() * 2;
+			
+			myControllersManager.Payment(reservation, paymentAmount, afterPayment, Consts.KioskExit);
+			
+		    }
+		    
+		    if (LocalDateTime.now().isBefore(exiTime.minusHours(1)))
+		    {
+			float refundAmount = (LocalDateTime.now().until(
+				LocalDateTime.of(reservation.getLeavingDate(), reservation.getLeavingHour()),
+				ChronoUnit.HOURS) + (float)0.25) * parkinglot.getGuestRate();
+			
+			DialogBuilder.AlertDialog(AlertType.INFORMATION, Consts.Approved,
+				"You arrived earlier than expected.\nYour departure time was: "
+					+ reservation.getLeavingDate() + " "
+					+ reservation.getLeavingHour().format(DateTimeFormatter.ISO_LOCAL_TIME)
+					+ "\nWe have credited your account with: " + refundAmount + "$",
+				null, false);
+			
+			CompletableFuture.runAsync(()->
+			{
+			   RequestsSender.CreditCustomer(new CreditCustomerRequest(reservation.getCustomerId(), refundAmount)); 
+			});
+		    }
+		    
 		    DialogBuilder.AlertDialog(AlertType.INFORMATION, Consts.Approved, Consts.LeaveTheParkinglotMessage,
 			    null, false);
 		    
